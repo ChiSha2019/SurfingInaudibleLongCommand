@@ -6,24 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/playButton"
-        android:layout_width="200dp"
+    <EditText
+        android:id="@+id/volumeEditText"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="164dp"
-        android:text="Play"
+        android:hint="Volume 0-1 (if inaudible volume 0.002)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/stopButton"
+        android:id="@+id/setAlarmManagerWithBroadCastReceiver"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:text="Play using AlarmManager With BroadCastReceiver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volumeEditText" />
+
+    <Button
+        android:id="@+id/alarmManagerWithService"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Play using AlarmManager With Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setAlarmManagerWithBroadCastReceiver" />
+
+    <Button
+        android:id="@+id/justService"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="164dp"
-        android:text="Stop"
+        android:layout_marginTop="10dp"
+        android:text="Play using Service"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        app:layout_constraintTop_toBottomOf="@+id/alarmManagerWithService" />
+
+    <Button
+        android:id="@+id/workManager"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:text="Start WorkManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/justService" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
